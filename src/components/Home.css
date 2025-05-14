@@ -1,0 +1,264 @@
+/* --- Home Section General --- */
+.home-section {
+    padding: 2rem 1rem;
+    animation: fadeInHome 1s ease-out;
+  }
+  
+  @keyframes fadeInHome {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* --- Home Header --- */
+  .home-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(10, 25, 47, 0.5); /* Fondo sutil, oscuro y azulado */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
+  }
+  
+  .profile-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .profile-image-container {
+    margin-bottom: 1rem;
+  }
+  
+  .profile-image { /* Estilo para tu imagen real */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #00e5ff; /* Borde neón */
+    box-shadow: 0 0 15px #00e5ff;
+    object-fit: cover;
+  }
+  
+  .profile-image-placeholder { /* Placeholder si no usas una imagen real aún */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #1a2c47; /* Color base placeholder */
+    border: 3px solid #00e5ff;
+    box-shadow: 0 0 15px #00e5ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem; /* Para un icono o iniciales si quieres */
+    color: #00e5ff;
+  }
+  .profile-image-placeholder::before {
+    content: "👤"; /* Icono placeholder simple */
+  }
+  
+  
+  .profile-text h1 {
+    font-size: 2.8rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .professional-tagline {
+    font-size: 1.2rem;
+    color: #00e5ff; /* Neón */
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  
+  .professional-summary {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #c0c0c0; /* Gris claro para mejor legibilidad */
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* --- Subsections --- */
+  .home-subsection {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: rgba(10, 25, 47, 0.3); /* Fondo sutil para secciones */
+    border-radius: 8px;
+    border-left: 4px solid #00e5ff;
+  }
+  
+  .home-subsection h2 {
+    font-size: 1.8rem;
+    color: #00e5ff;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.3);
+    display: flex;
+    align-items: center;
+  }
+  
+  .home-subsection h2 .icon-graduation-cap,
+  .home-subsection h2 .icon-cogs,
+  .home-subsection h2 .icon-briefcase {
+    margin-right: 0.75rem;
+    font-size: 1.6rem; /* Ajusta si usas iconos reales */
+  }
+  
+  /* --- Grid para Estudios/Certificaciones --- */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .grid-item {
+    background: rgba(15, 35, 60, 0.5);
+    padding: 1.5rem;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 229, 255, 0.15);
+  }
+  
+  .grid-item h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .grid-item p {
+    font-size: 0.95rem;
+    color: #b0b0b0;
+    margin-bottom: 0.3rem;
+  }
+  .grid-item .item-description {
+    font-size: 0.9rem;
+    color: #88a1b9; /* Un color más sutil para la descripción */
+    font-style: italic;
+  }
+  
+  /* --- Skills --- */
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .skill-category {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .skill-category h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  
+  .skill-category ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .skill-category ul li {
+    background: rgba(15, 35, 60, 0.4);
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    color: #c0c0c0;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .skill-category ul li:hover {
+    background-color: #00e5ff;
+    color: #0a0f18;
+  }
+  
+  /* --- Experience --- */
+  .experience-item {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid rgba(0, 229, 255, 0.5);
+    position: relative;
+  }
+  .experience-item::before { /* Pequeño círculo en la línea de tiempo */
+    content: '';
+    position: absolute;
+    left: -9px; /* (ancho_circulo / 2) + (ancho_borde_izq / 2) */
+    top: 0px;
+    width: 15px;
+    height: 15px;
+    background-color: #00e5ff;
+    border-radius: 50%;
+    border: 2px solid #0a0f18;
+  }
+  
+  
+  .experience-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .experience-item h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+  }
+  
+  .experience-item p { /* Para la empresa y fechas */
+    font-size: 1rem;
+    color: #00e5ff;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .experience-details {
+    list-style: disc;
+    padding-left: 20px;
+    color: #b0b0b0;
+  }
+  
+  .experience-details li {
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  /* --- Iconos (placeholders, necesitarías una librería de iconos o SVGs) --- */
+  /* Si usas FontAwesome o similar, los estilos serían diferentes.
+     Estos son solo para que los placeholders <i> no rompan el layout. */
+  .icon-graduation-cap::before { content: "🎓"; } /* Ejemplo con emoji */
+  .icon-cogs::before { content: "⚙️"; }
+  .icon-briefcase::before { content: "💼"; }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .profile-intro {
+      flex-direction: column;
+      text-align: center;
+    }
+    .profile-image-container {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+    .profile-text h1 {
+      font-size: 2.2rem;
+    }
+    .professional-tagline {
+      font-size: 1rem;
+    }
+    .skills-container {
+      flex-direction: column;
+    }
+    .home-section {
+      padding: 1rem 0.5rem;
+    }
+    .home-subsection h2 {
+      font-size: 1.6rem;
+    }
+  }

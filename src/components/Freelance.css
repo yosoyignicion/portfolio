@@ -1,0 +1,199 @@
+/* --- Freelance Section General --- */
+.freelance-section {
+    padding: 2rem 1rem;
+    animation: fadeInFreelance 1s ease-out;
+  }
+  
+  @keyframes fadeInFreelance {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* --- Freelance Header --- */
+  .freelance-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(10, 25, 47, 0.5); /* Coherente con Home.css */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
+  }
+  
+  .freelance-profile-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .freelance-profile-image {
+    width: 120px; /* Ligeramente más pequeña que en Home si se desea */
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #00e5ff;
+    box-shadow: 0 0 15px #00e5ff;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .freelance-profile-text h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .freelance-tagline {
+    font-size: 1.3rem;
+    color: #00e5ff; /* Neón */
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  
+  .freelance-summary {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #c0c0c0;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  /* --- Services Tiers --- */
+  .services-tiers {
+    margin-bottom: 2rem;
+  }
+  
+  .services-tiers h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #00e5ff;
+    margin-bottom: 2.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.3);
+  }
+  
+  .tiers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .tier-card {
+    background: rgba(15, 35, 60, 0.7); /* Ligeramente más opaco para destacar */
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tier-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.25);
+  }
+  
+  .tier-icon-container {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    height: 50px; /* Para alinear iconos si son de diferente altura */
+  }
+  
+  .tier-icon { /* Estilo para los emojis o futuros iconos SVG/Font */
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: rgba(0, 229, 255, 0.1);
+    line-height: 1; /* Para centrar mejor el emoji si es necesario */
+  }
+  
+  
+  .tier-card h3 {
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .tier-description {
+    font-size: 0.95rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Para que las descripciones ocupen espacio y los CTA se alineen abajo */
+  }
+  
+  .tier-details {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #c0c0c0;
+  }
+  
+  .tier-details li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2em; /* Espacio para un posible marcador personalizado */
+    position: relative;
+  }
+  
+  .tier-details li::before { /* Marcador de lista personalizado */
+    content: '✓'; /* O '▹', '»', etc. */
+    color: #00e5ff;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
+  
+  
+  .tier-details strong {
+    color: #ffffff;
+  }
+  
+  .tier-cta {
+    display: inline-block;
+    background-color: #00e5ff;
+    color: #0a0f18; /* Color de fondo oscuro para el texto */
+    padding: 0.8rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: auto; /* Empuja el botón al final de la card */
+  }
+  
+  .tier-cta:hover {
+    background-color: #ffffff;
+    color: #007bff; /* Un azul más estándar para el hover */
+    transform: scale(1.05);
+  }
+  
+  /* Colores específicos para los bordes o acentos de cada tier si se desea */
+  .basic-tier {
+    border-left: 5px solid #4caf50; /* Verde para básico */
+  }
+  .medium-tier {
+    border-left: 5px solid #ffc107; /* Amarillo para mediano */
+  }
+  .large-tier {
+    border-left: 5px solid #f44336; /* Rojo para grande */
+  }
+  
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .freelance-profile-text h2 {
+      font-size: 1.8rem;
+    }
+    .freelance-tagline {
+      font-size: 1.1rem;
+    }
+    .services-tiers h2 {
+      font-size: 1.6rem;
+    }
+    .tier-card h3 {
+      font-size: 1.4rem;
+    }
+  }

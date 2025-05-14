@@ -1,38 +1,66 @@
+/* Limpiar estilos por defecto y establecer un box-sizing global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  /* background-color: #f4f4f4; */ /* Comentamos o eliminamos el fondo claro anterior */
+  background-color: #0a0f18; /* Un azul muy oscuro, casi negro, para el fondo base */
+  color: #e0e0e0; /* Un color de texto claro por defecto */
+}
+
+.app-main {
+  flex-grow: 1; /* Permite que esta sección ocupe el espacio disponible */
+  padding: 2rem;
+}
+
+/* Los estilos de .app-header ahora están en Navbar.css */
+/*
+.app-header {
+  // ... estilos movidos ...
+}
+*/
+
+/* Los estilos de .social-icons y .app-nav ahora están en Navbar.css */
+/*
+.social-icons span,
+.app-nav span {
+  // ... estilos movidos ...
+}
+/* Los estilos de .app-footer ahora están en Footer.css */
+/*
+.app-footer {
+  // ... estilos movidos ...
+}
+*/
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh; /* Asegura que el footer quede abajo si el contenido es corto */
+}
+
+
+.back-to-top {
+  padding: 10px 15px;
+  background-color: #555;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.back-to-top:hover {
+  background-color: #777;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilos para el tema Dark and Blue Neon (ejemplo inicial, se desarrollará más) */
+/*
+body.dark-theme {
+  background-color: #0a192f;
+  color: #ccd6f6;
 }
+*/

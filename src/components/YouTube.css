@@ -1,0 +1,140 @@
+/* Estilos para la nueva sección de YouTube (youtube-section-v2) */
+
+.youtube-section-v2 {
+    padding-top: 0; /* El banner ocupará el espacio superior */
+    animation: fadeInYouTubeV2 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido principal */
+  }
+  
+  @keyframes fadeInYouTubeV2 {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .youtube-top-banner {
+    width: 100%;
+    height: 250px; /* Altura del banner, ajusta según tu imagen o diseño */
+    background-color: #1a2c47; /* Color de fondo placeholder para el banner */
+    /* Si usas una imagen de fondo:
+    background-image: url('../assets/banner-youtube.jpg');
+    background-size: cover;
+    background-position: center;
+    */
+    border-bottom: 3px solid #00e5ff; /* Línea neón inferior */
+  }
+  
+  .youtube-content-area {
+    max-width: 800px; /* Ancho máximo del contenido principal */
+    width: 90%;
+    text-align: center;
+    padding: 2rem;
+    margin-top: -80px; /* Solapa ligeramente el banner para un efecto agradable */
+    position: relative; /* Para que el margen negativo funcione bien */
+    background-color: rgba(10, 15, 24, 0.85); /* Fondo oscuro semi-transparente */
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.2);
+  }
+  
+  .youtube-profile-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .youtube-profile-image {
+    width: 150px; /* Tamaño similar al de Home */
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #00e5ff; /* Borde neón */
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .youtube-channel-name {
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  .youtube-description-section {
+    margin-bottom: 2rem;
+    color: #c0c0c0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  
+  .youtube-description-section p {
+    margin-bottom: 1rem;
+  }
+  
+  .youtube-description-section strong {
+    color: #00e5ff; /* Resaltar YSII Music */
+  }
+  
+  .youtube-cta-buttons {
+    display: flex;
+    flex-direction: column; /* Apila los botones en móvil */
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .youtube-action-button {
+    padding: 0.9rem 1.8rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    min-width: 250px; /* Ancho mínimo para los botones */
+    text-align: center;
+  }
+  
+  .youtube-action-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .youtube-subscribe-button {
+    background-color: #ff0000; /* Rojo YouTube */
+    color: #ffffff;
+  }
+  
+  .youtube-subscribe-button:hover {
+    background-color: #cc0000;
+  }
+  
+  .buymeacoffee-button {
+    background-color: #FFDD00; /* Amarillo BuyMeACoffee */
+    color: #000000;
+  }
+  
+  .buymeacoffee-button:hover {
+    background-color: #e6c600;
+  }
+  
+  .donation-appreciation {
+    font-size: 0.95rem;
+    color: #a0a0a0;
+    font-style: italic;
+    margin-top: 1rem;
+  }
+  
+  /* Media Query para botones lado a lado en pantallas más grandes */
+  @media (min-width: 600px) {
+    .youtube-cta-buttons {
+      flex-direction: row; /* Botones lado a lado */
+      justify-content: center; /* Centra los botones */
+    }
+  }
+  
+  
+  /* --- COMENTA O ELIMINA LOS ESTILOS ANTIGUOS DE LA GALERÍA DE VIDEOS --- */
+  /*
+  .youtube-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  // ... y así sucesivamente para .video-gallery, .video-card, etc.
+  */

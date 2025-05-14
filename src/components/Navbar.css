@@ -1,0 +1,119 @@
+/* Navbar.css */
+.app-header {
+  background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro semi-transparente */
+  padding: 0.8rem 2rem; /* Padding ajustado */
+  display: flex;
+  justify-content: space-between; /* Separa los menús */
+  align-items: center;
+  position: sticky; /* Mantiene la navbar arriba */
+  top: 0;
+  z-index: 1000; /* Asegura que esté por encima de otro contenido */
+  border-bottom: 1px solid rgba(0, 229, 255, 0.2); /* Borde neón sutil */
+  min-height: 60px; /* Altura mínima */
+}
+
+.social-menu,
+.navigation-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem; /* Espacio entre elementos del menú */
+}
+
+.social-menu a,
+.navigation-menu a,
+.navigation-menu .Link { /* Aplicar a Link también si es necesario */
+  color: #00e5ff; /* Color neón para los enlaces */
+  text-decoration: none;
+  font-size: 0.95rem; /* Tamaño de fuente base */
+  padding: 0.5rem 0.2rem; /* Padding para mejor clic */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  white-space: nowrap; /* Evita que el texto se parta en varias líneas */
+}
+
+.social-menu a:hover,
+.navigation-menu a:hover,
+.navigation-menu .Link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.7);
+}
+
+/* Estilos específicos para el menú de navegación (derecha) */
+.navigation-menu {
+  justify-content: flex-end; /* Alinea los items a la derecha */
+}
+
+/* Botón de hamburguesa para móvil */
+.mobile-nav-toggle {
+  display: none; /* Oculto por defecto */
+  background: none;
+  border: none;
+  color: #00e5ff;
+  font-size: 1.8rem; /* Tamaño del icono */
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) { /* Un punto de quiebre un poco más grande para acomodar los menús */
+  .social-menu {
+    gap: 0.8rem; /* Reduce el espacio en pantallas medianas */
+  }
+  .navigation-menu {
+    gap: 0.8rem;
+  }
+  .social-menu a,
+  .navigation-menu a {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .social-menu {
+    display: none; /* Oculta el menú social en pantallas pequeñas */
+  }
+
+  .mobile-nav-toggle {
+    display: block; /* Muestra el botón de hamburguesa */
+    order: 1; /* Asegura que esté a la derecha si es necesario */
+  }
+
+  .navigation-menu {
+    display: none; /* Oculta el menú de navegación por defecto */
+    flex-direction: column; /* Apila los enlaces verticalmente */
+    position: absolute;
+    top: 100%; /* Se despliega debajo de la navbar */
+    left: 0;
+    width: 100%;
+    background-color: rgba(10, 25, 47, 0.95); /* Fondo para el menú desplegado */
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 229, 255, 0.2);
+    align-items: center; /* Centra los items del menú */
+    gap: 0.5rem; /* Espacio entre items en el menú desplegado */
+  }
+
+  .navigation-menu.open {
+    display: flex; /* Muestra el menú cuando está abierto */
+  }
+
+  .navigation-menu a {
+    font-size: 1.1rem; /* Texto más grande para el menú móvil */
+    padding: 0.8rem 1rem; /* Más padding para facilitar el toque */
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: center; /* Centra el texto */
+    border-bottom: 1px solid rgba(0, 229, 255, 0.1); /* Separador sutil */
+  }
+  .navigation-menu a:last-child {
+    border-bottom: none; /* Sin borde para el último elemento */
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: 0.5rem 1rem; /* Menos padding en pantallas muy pequeñas */
+  }
+  .mobile-nav-toggle {
+    font-size: 1.6rem;
+  }
+}
