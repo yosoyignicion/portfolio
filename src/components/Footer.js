@@ -7,13 +7,15 @@ function Footer() {
     <footer className="app-footer">
       <div className="footer-links"> {/* Contenedor para los enlaces */}
         {/* Puedes convertir estos también en Links si van a ser páginas internas */}
-        <Link to="/politica-de-privacidad">Política de Privacidad(Soon)</Link> {/* Placeholder */}
-        <Link to="/politica-de-cookies">Política de Cookies(Soon)</Link> {/* Placeholder */}
-        <Link to="/contacto">Contacto</Link> {/* Enlace a la página de contacto */}
+        //<Link to="/politica-de-privacidad">Política de Privacidad(Soon)</Link> {/* Placeholder */}
+        //<Link to="/politica-de-cookies">Política de Cookies(Soon)</Link> {/* Placeholder */} 
+        <Link to="/contacto">Contacto</Link> {/* Enlace a la página de contacto */}/*
       </div>
-      <p className="copyright-text">Copyright {new Date().getFullYear()} @yosoyignicion</p> {/* Año dinámico y clase para el copyright */}
+      <p>Powered by React & GitHub</p>
+      <p className="copyright-text">All right reserved. {new Date().getFullYear()} @yosoyignicion</p> {/* Año dinámico y clase para el copyright */}
     </footer>
   );
 }
 
 export default Footer;
+
